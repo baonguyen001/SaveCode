@@ -1,0 +1,26 @@
+server:
+    port: 8083
+spring:
+    datasource:
+        url: jdbc:mysql://127.0.0.1:3307/osahaneat
+        username: root
+        password: admin123
+        driver-class-name: com.mysql.cj.jdbc.Driver
+
+    jpa:
+        hibernate:
+            ddl-auto: none
+        show-sql: false
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQLDialect
+    servlet:
+        multipart:
+            max-file-size: 10MB
+
+
+jwt:
+    privateKey: WsiI/4QeWLQ38cdzvF5fqWQWZ7Qsncfp4J5KCy2IjlE=
+
+fileUpload:
+    rootPath: C:\Users\Acer\Desktop\Uploads
