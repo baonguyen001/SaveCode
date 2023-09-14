@@ -1,0 +1,25 @@
+// import theo thứ tự
+// Helpers
+@import './Helpers/variables';
+@import './Helpers/mixin';
+@import './Helpers/extends.scss';
+
+// Vendors
+
+// Base
+@import './Base/reset';
+@import './Base/customize';
+
+// Layouts
+@import './Layouts/header';
+@import './Layouts/footer';
+@import './Layouts/intro';
+
+// Components
+@import './Components/_button';
+@import './Components/cover';
+
+// Pages
+@import './Pages/home';
+
+// Theme

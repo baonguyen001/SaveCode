@@ -1,0 +1,33 @@
+.intro{
+    background: linear-gradient(-45deg, $color-red-0, $color-puple );
+    padding: $pd-3;
+    
+    .intro__content{
+        width: 78%;
+        margin: 0 auto;
+        text-align: center;
+        .intro__item{
+            display: flex;
+            align-items: center;
+        }
+        
+        .intro__icon{
+            font-size: $fs-6;
+            color: $color-white-0;
+        }
+        .intro__details{
+            margin-left: $mg-1;
+            p{
+                margin-bottom: 0;
+                &:first-child{
+                    @include styleText($color-white-0, $fs-3 - 1, $fw-2);
+                }
+                &:last-child{
+                    @include styleText($color-white-0, $fs-0, $fw-0);
+                }
+
+            }
+        }
+    }
+
+}

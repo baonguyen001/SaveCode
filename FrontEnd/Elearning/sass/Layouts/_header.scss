@@ -1,0 +1,104 @@
+// css
+// .myNarBar__left .navbar-brand{
+
+// }
+// flex-grow: chia phần trống cho các thẻ
+.myNarBar {
+    box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1), 0 3px 1px 0 rgba(20, 23, 18, 0.1);
+    .myNarBar__col{
+        padding-left: 0;
+    }
+    .myNarBar__left {
+        display: flex;
+        align-items: center;
+
+        .navbar-brand {
+            flex-grow: 1;
+            text-align: center;
+            margin-right: 0;
+
+            img {
+                width: 110px;
+            }
+        }
+
+        .myNarBar__categories {
+            flex-grow: 1;
+            text-align: center;
+            @include styleText($color-gray-3, $fs-1, $fw-0);
+            // thay doi con tro chuot khi de vao
+            cursor: pointer;
+        }
+
+        .myNarBar__form-search {
+            flex-grow: 8;
+            margin-bottom: 0;
+
+            @include styleFormSearch($color-white-cream, $color-white-0, $color-gray-4);
+        }
+    }
+
+    .myNarBar__right {
+        .navbar-nav {
+            justify-content: space-between;
+            align-items: center;
+
+            .nav-item {
+                padding: $pd-2 + 2 $pd-2;
+                border-radius: $boder-radius + 1;
+                position: relative;
+                .nav-link {
+                    @include styleText($color-black-light, $fs-1, $fw-0);
+                }
+                &:hover{
+                    background-color: $color-gray-1;
+                    .overlay{
+                        display: block;
+                    }
+                }
+                .overlay{
+                    display: none;
+                    background-color: $color-white-0;
+                    width: 330px;
+                    padding: $pd-3;
+                    text-align: center;
+                    position: absolute;
+                    top: 61px;
+                    right: 0;
+                    border-top: 1px solid $color-gray-1;
+                    box-shadow: 0 4px 16px rgba(20, 23, 28, 0.25);
+                   
+                    &::before{
+                        content: '';
+                        width: 15px;
+                        height: 15px;
+                        background-color: $color-white-0;
+                        display: block;
+                        // border-top: 1px solid rgba(20, 23, 28, 0.25);
+                        // border-left: px solid rgba(20, 23, 28, 0.25);
+                        position: absolute;
+                        top: -8px;
+                        right: 10%;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+
+            .myNarBar__cart {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                line-height: 20px;
+                .nav-link {
+                    font-size: $fs-3 + 2;
+                }
+            }
+            .myNarBar__button{
+                &:hover{
+                    background-color: transparent;
+                }
+            }
+
+        }
+    }
+}

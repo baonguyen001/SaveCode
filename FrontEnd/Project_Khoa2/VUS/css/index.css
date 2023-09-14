@@ -1,0 +1,164 @@
+/* GLOBAL */
+*{
+    box-sizing: border-box;
+}
+html, body{
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.clear{
+    clear: both;
+}
+h2{
+    font-size: 25px;
+    /* chuyển chữ thường thành chữ in */
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 50px;
+}
+.line{
+    width: 30%;
+}
+
+
+/* HEADING */
+.header__itemLeft{
+    float:left;
+}
+.header__itemRight{
+    float:right;
+    margin-right: 120px;
+}
+
+.header__navbar ul{
+    list-style: none;
+    border-top: 2px solid #E8E8E8;
+    border-bottom: 2px solid #E8E8E8;
+    text-align: center;
+    padding: 15px 0;
+}
+.header__navbar ul li{
+    display: inline;
+}
+.header__navbar ul a{
+    /* bỏ gạch chân */
+    text-decoration: none;
+    color:#636363;
+    /* độ đậm của chữ */
+    font-weight: bold;
+    /* vw, vh */
+    font-size: 1.1vw;
+    /* 1 em = 1.13vw */
+    /* font-size: 16px;
+    1 em = 16px */
+    padding: 0 0.3em;
+}
+.header__navbar ul li:hover
+{
+    border-bottom: 2px solid red;
+}
+.header__navbar ul .active{
+    border-bottom: 2px solid red;
+}
+
+/* CAROUSEL */
+.carousel{
+    background-image: url("../img/banner-GV-01-1.webp");
+    height: 500px;
+    background-size: cover;
+    background-position: center center;
+    margin-top: 20px;
+}
+
+/* INTRO */
+.intro p{
+    text-align: center;
+    color: #636363;
+    line-height: 25px;
+    padding: 0 25px;
+}
+
+/* PROGRAMS */
+.programs__item{
+    float: left;
+    width: 33.33%;
+    padding: 0 10px;
+}
+.programs__item img{
+    width: 100%;
+}
+.programs__item h3{
+    text-transform: uppercase;
+    font-size: 16px;
+    color: red;
+    margin: 10px 0 3px;
+}
+.programs__item p{
+    color: #636363;
+    margin: 0;
+    font-size: 13px;
+}
+
+/* NEWS */
+.news{
+    margin-bottom: 20px;
+}
+.news__left, .news__right{
+    float: left;
+    width: 50%;
+    padding: 0 5px;
+}
+.news__left img{
+    height: 490px;
+}
+.news__text img{
+    width: 100%;
+    display: block;
+}
+.news__text{
+    position: relative;
+}
+
+.news__text p{
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+    text-transform: uppercase;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.553);
+    width: 100%;
+    padding: 10px 15px ;
+}
+.news__left .news__text p{
+    font-size: 23px;
+}
+
+.new__small-item{
+    float: left;
+    width: 50%;
+    padding: 0 8.5px 15px;
+}
+.news__text hr{
+    margin: 0;
+    height: 5px;
+    background-color: red;
+    
+}
+
+/* FOOTER */
+.footer{
+    background-color: red;
+    color: white;
+    padding: 7px 50px;
+}
+.footer img{
+    padding-top: 30px;
+    float:left;
+ 
+}
+.footer p{
+    width: 50%;
+    float: right;
+    word-spacing: 2px;
+    text-align: justify;
+}

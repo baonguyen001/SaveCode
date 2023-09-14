@@ -1,0 +1,183 @@
+/* GLOBAL */
+*{
+    box-sizing: border-box;
+}
+html, body{
+    font-family: 'Times New Roman', Times, serif;
+}
+.clear{
+    clear: both;
+}
+/* HEADER */
+.header img{
+    width: 250px;
+}
+.header ul{
+    list-style: none;
+    background-color: black;
+    padding: 15px 0px;
+    margin: 5px 0px 10px;
+}
+.header a{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+.header li{
+    display: inline;
+    margin: 0px 10px;
+}
+/* CAROUSEL */
+.carousel{
+    background-image: url("../img/slider_1.jpg");
+    background-repeat: no-repeat;
+    height: 550px;
+    background-position: center;
+    background-size: cover;
+}
+
+/* INTRO */
+.intro__text{
+    margin: 20px 0 40px;
+    font-size: 20px;
+}
+.intro__text span{
+    color: red;
+    font-weight: bold;
+}
+.intro__left, .intro__right{
+    float: left;
+    width: 50%;
+}
+.intro__small{
+    float: left;
+    width: 50%;
+}
+.intro__item{
+    padding: 0 15px 25px;
+}
+.intro__item img{
+    width: 100%;
+    display: block;
+}
+
+/* PRODUCTS */
+.products{
+    margin-bottom: 70px;
+}
+.products h2{
+    text-align: center;
+    font-size: 30px;
+}
+
+.products__item{
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+.products__item img{
+    width: 100%;
+}
+.products p{
+    text-align: left;
+}
+
+.products h3{
+    font-size: 25px;
+}
+
+.products__item p{
+    font-size: 17px;
+}
+
+.products__item button{
+    background-color: red;
+
+    /* Bo góc hình */
+    border: 1px solid red;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin-top: 15px;
+
+    color: white;
+}
+
+/* BANNER */
+.banner{
+    background-image: url("../img/nature.jpg");
+    height: 400px;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    position: relative;
+}
+.banner__circle{
+    width: 300px;
+    height: 300px;
+    background-color: rgba(131, 41, 39, 0.838);
+    color:white;
+    border-radius: 50%;   
+    text-align: center; 
+    position: absolute;
+    top: 15px;
+    left: 340px;
+    /* opacity: 0.8; Độ mờ của thẻ (tất cả nội dung) */
+}
+
+.banner__circle p{
+    font-size: 20px;
+    margin: 0 0 20px;
+
+}
+.banner__circle p:first-child{
+    font-size: 30px;
+    margin: 50px 0 0;
+    
+}
+.banner__circle p:nth-child(2){
+    font-size: 80px;
+}
+
+/* SERVICES */
+.services{
+    margin: 25px 0 10px;
+}
+.services__content{
+    width: 70%;
+    margin: auto;
+    
+}
+.services__item{
+    float:left;
+    width: 33.33%;
+    text-align: center;
+    padding: 0 10px;
+}
+.services__item img{
+    width: 35px;
+    margin: 0 0 -10px;
+}
+.services__item h3{
+    margin: 10px 0;
+}
+.services__item p{
+    margin: 5px 0 10px;
+}
+/* FOOTER */
+.footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0 15px;
+    
+}
+.footer h2, .footer p{
+    margin: 0;
+}
+.footer h2{
+    font-size: 30px;
+}
+
+
+
+

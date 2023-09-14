@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Cyber</title>
+    <!-- FONT GOOGLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Work+Sans:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- BS4 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- AINIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- VENOBOX CSS -->
+    <link rel="stylesheet" href="./css/venobox.css">
+
+    <!-- Main -->
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <!-- HRADER -->
+    <header class="container-md">
+        <p class="container text-while mb-0">
+            <i class="fa fa-phone"></i>
+            <span class="mx-3 boder-right pr-2"> 083.231.68720</span>
+            <i class="fa fa-search"></i>
+        </p>
+        <nav class="navbar navbar-expand-md container p-0 ">
+            <a class="navbar-brand" href="#"><img src="./img/logo.svg" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#movieNavBar"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fa fa-bars"></i>
+                </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="movieNavBar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active line">
+                        <a class="nav-link" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item line">
+                        <a class="nav-link" href="#">WHAT'SON</a>
+                    </li>
+                    <li class="nav-item line">
+                        <a class="nav-link" href="#">SHORCOCES</a>
+                    </li>
+                    <li class="nav-item line">
+                        <a class="nav-link" href="#">NEWS</a>
+                    </li>
+                    <li class="nav-item line">
+                        <a class="nav-link" href="#">CONTACT</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <header id="headerFixed" class="container-fluid">
+        <nav class="navbar navbar-expand-md container ">
+            <a class="navbar-brand" href="#"><img src="./img/logo.svg" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#movieNavBar"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fa fa-bars"></i>
+                </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="movieNavBar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active line">
+                        <a class="nav-link" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item line">
+                        <a class="nav-link" href="#">WHAT'SON</a>
+                    </li>
+                    <li class="nav-item line">
+                        <a class="nav-link" href="#">SHORCOCES</a>
+                    </li>
+                    <li class="nav-item line">
+                        <a class="nav-link" href="#">NEWS</a>
+                    </li>
+                    <li class="nav-item line">
+                        <a class="nav-link" href="#">CONTACT</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- CAROUDEL -->
+    <section class="movieCarousel">
+        <!-- Hiệu ứng chuyển slide ẩn hiện .carousel-fade -->
+        <!--  data-ride="carousel" -->
+        <div id="carouselMovie" class="carousel slide carousel-fade">
+            <ol class="container carousel-indicators">
+                <li data-target="#carouselMovie" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselMovie" data-slide-to="1"></li>
+                <li data-target="#carouselMovie" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <!-- <img src="./img/hero-1.jpg" class="d-block w-100" alt="hero-1"> -->
+                    <div class="movieCarousel_overlay"></div>
+                    <div class="container carousel-caption">
+                        <div class="col-12 col-lg-9 px-0">
+                            <p class="animate__animated animate__fadeInDown">ACTION, ADVENTURE, FANTASY</p>
+                            <h2 class="animate__animated animate__fadeInDown">End of the World: part I</h2>
+                            <p class="animate__animated animate__fadeInUp">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Numquam amet doloremque autem
+                                maxime deserunt</p>
+                            <div class="movieCarousel__trailer animate__animated animate__fadeInUp">
+                                <span>PG</span>
+                                <button>
+                                    <span>
+                                        <i class="fa fa-play"></i>
+                                        PLAY TRAILER
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="movieCarousel_overlay"></div>
+                    <!-- <img src="./img/hero-2.jpg" class="d-block w-100" alt="..."> -->
+                    <div class="container carousel-caption">
+                        <div class="col-12 col-lg-9 px-0">
+                            <p class="animate__animated animate__fadeInDown">ACTION, ADVENTURE, FANTASY</p>
+                            <h2 class="animate__animated animate__fadeInDown">End of the World: part II</h2>
+                            <p class="animate__animated animate__fadeInUp">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Numquam amet doloremque autem
+                                maxime deserunt </p>
+                            <div class="movieCarousel__trailer animate__animated animate__fadeInUp">
+                                <span>PG</span>
+                                <button>
+                                    <span>
+                                        <i class="fa fa-play"></i>
+                                        PLAY TRAILER
+                                    </span>
+                                </button>
+                                </span>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="movieCarousel_overlay"></div>
+                    <!-- <img src="./img/hero-3.jpg" class="d-block w-100" alt="..."> -->
+                    <div class="container carousel-caption ">
+                        <div class="col-12 col-lg-9 px-0">
+                            <p class="animate__animated animate__fadeInDown">ACTION, ADVENTURE, FANTASY</p>
+                            <h2 class="animate__animated animate__fadeInDown">End of the World: part III</h2>
+                            <p class="animate__animated animate__fadeInUp">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Numquam amet doloremque autem
+                                maxime deserunt</p>
+                            <div class="movieCarousel__trailer animate__animated animate__fadeInUp">
+                                <span>PG</span>
+                                <button>
+                                    <span>
+                                        <i class="fa fa-play"></i>
+                                        PLAY TRAILER
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <!-- NEWIN -->
+    <section class="newIn section">
+        <div class="container">
+            <h2 class="title">NEW IN</h2>
+            <div class="newIn__content">
+                <div class="row">
+                    <div class="col-6 col-md-3">
+                        <div class="newIn__img ">
+                            <img class="img-fluid" src="./img/movie-1.jpg" alt="">
+                            <div class="newIN_overplay"></div>
+                            <div class="newIn__play">
+                                <div>
+                                    <a href="#">
+                                        <i class="fa fa-play"></i>
+                                    </a>
+                                    <a href="#">read more</a>
+                                    <p class="date">Realeased: 7 Mar, 2017</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="newIn__title mb-3 mb-md-0 ">
+                            <h3>The last post</h3>
+                            <div>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="newIn__img">
+                            <img class="img-fluid" src="./img/movie-2.jpg" alt="">
+                            <div class="newIN_overplay"></div>
+                            <div class="newIn__play">
+                                <div>
+                                    <a href="#">
+                                        <i class="fa fa-play"></i>
+                                    </a>
+                                    <a href="#">read more</a>
+                                    <p class="date">Realeased: 7 Mar, 2017</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="newIn__title mb-3 mb-md-0">
+                            <h3>Dark and lonely</h3>
+                            <div>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="newIn__img">
+                            <img class="img-fluid" src="./img/movie-3.jpg" alt="">
+                            <div class="newIN_overplay"></div>
+                            <div class="newIn__play">
+                                <div>
+                                    <a href="#">
+                                        <i class="fa fa-play"></i>
+                                    </a>
+                                    <a href="#">read more</a>
+                                    <p class="date">Realeased: 7 Mar, 2017</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="newIn__title mb-3 mb-md-0">
+                            <h3>Venture</h3>
+                            <div>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="newIn__img">
+                            <img class="img-fluid" src="./img/movie-4.jpg" alt="">
+                            <div class="newIN_overplay"></div>
+                            <div class="newIn__play">
+                                <div>
+                                    <a href="#">
+                                        <i class="fa fa-play"></i>
+                                    </a>
+                                    <a href="#">read more</a>
+                                    <p class="date">Realeased: 7 Mar, 2017</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="newIn__title mb-3 mb-md-0">
+                            <h3>Hust</h3>
+                            <div>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- SHOWTIMES -->
+    <section class="showTimes section">
+        <div class="container-md">
+            <!-- tại class của thẻ ul thêm class flex-columm và flex-sm-row để màn hình nhỏ hơn 567px các li xếp theo cột còn lớn hơn 576px thì sắp theo hàng -->
+            <ul class="nav nav-tabs flex-column flex-sm-row" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link line active" id="mon-tab" data-toggle="tab" href="#mon" role="tab"
+                        aria-controls="home" aria-selected="true">
+                        <span>MON</span>
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link line" id="tue-tab" data-toggle="tab" href="#tue" role="tab"
+                        aria-controls="profile" aria-selected="false">
+                        <span>TUE</span>
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link line" id="today-tab" data-toggle="tab" href="#today" role="tab"
+                        aria-controls="contact" aria-selected="false">
+                        <span>TODAY</span>
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link line" id="thu-tab" data-toggle="tab" href="#thu" role="tab"
+                        aria-controls="contact" aria-selected="false">
+                        <span>THU</span>
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link line" id="fri-tab" data-toggle="tab" href="#fri" role="tab"
+                        aria-controls="contact" aria-selected="false">
+                        <span>FRI</span>
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link line" id="sat-tab" data-toggle="tab" href="#sat" role="tab"
+                        aria-controls="contact" aria-selected="false">
+                        <span>SAT</span>
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link line" id="sun-tab" data-toggle="tab" href="#sun" role="tab"
+                        aria-controls="contact" aria-selected="false">
+                        <span>SUN</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="mon" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="row py-5 showTimes__row">
+                        <div class="col-12 col-md-3 col-lg-2">
+                            <img class="img-fluid" src="./img/movie-5.jpg" alt="">
+                        </div>
+                        <div class="col-12 col-md-9 col-lg-10 mt-3 mt-md-0">
+                            <p>ACTION, ADVENTURE, FANTASY</p>
+                            <h3>Captain America: The First Avenger</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam laboriosam illo nulla
+                                omnis assumenda reprehenderit provident alias consectetur rem dolorum.</p>
+                            <p><a href="#">FULL SYNOPYY <i class="fa fa-angle-double-right"></i></a></p>
+
+                            <div class="row showTimes__runningTimes">
+                                <div class="col-12 col-md-9 d-lg-flex align-items-center">
+                                    <span><i class="fa fa-clock"></i> VIEWING TIME</span>
+                                    <div>
+                                        <!-- disabled: chỉ đọc không thao tác được với button -->
+                                        <button class="btn" disabled>10:30</button>
+                                        <button class="btn">12:30</button>
+                                        <button class="btn">14:30</button>
+                                        <button class="btn">16:30</button>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3  text-md-right showTimes__mins mt-3 mt-md-0">
+                                    <span>105 MINS</span>
+                                    <span>15</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row py-5 showTimes__row">
+                        <div class="col-12 col-md-3 col-lg-2">
+                            <img class="img-fluid" src="./img/movie-6.jpg" alt="">
+                        </div>
+                        <div class="col-12 col-md-9 col-lg-10 mt-3 mt-md-0">
+                            <p>ACTION, ADVENTURE, FANTASY</p>
+                            <h3>Captain America: The First Avenger</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam laboriosam illo nulla
+                                omnis assumenda reprehenderit provident alias consectetur rem dolorum.</p>
+                            <p><a href="#">FULL SYNOPYY <i class="fa fa-angle-double-right"></i></a></p>
+
+                            <div class="row showTimes__runningTimes">
+                                <div class="col-12 col-md-9 d-lg-flex align-items-center">
+                                    <span><i class="fa fa-clock"></i> VIEWING TIME</span>
+                                    <div>
+                                        <!-- disabled: chỉ đọc không thao tác được với button -->
+                                        <button class="btn" disabled>10:30</button>
+                                        <button class="btn">12:30</button>
+                                        <button class="btn">14:30</button>
+                                        <button class="btn">16:30</button>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3  text-md-right showTimes__mins mt-3 mt-md-0">
+                                    <span>105 MINS</span>
+                                    <span>15</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row py-5 showTimes__row">
+                        <div class="col-12 col-md-3 col-lg-2">
+                            <img class="img-fluid" src="./img/movie-7.jpg" alt="">
+                        </div>
+                        <div class="col-12 col-md-9 col-lg-10 mt-3 mt-md-0">
+                            <p>ACTION, ADVENTURE, FANTASY</p>
+                            <h3>Captain America: The First Avenger</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam laboriosam illo nulla
+                                omnis assumenda reprehenderit provident alias consectetur rem dolorum.</p>
+                            <p><a href="#">FULL SYNOPYY <i class="fa fa-angle-double-right"></i></a></p>
+
+                            <div class="row showTimes__runningTimes">
+                                <div class="col-12 col-md-9 d-lg-flex align-items-center">
+                                    <span><i class="fa fa-clock"></i> VIEWING TIME</span>
+                                    <div>
+                                        <!-- disabled: chỉ đọc không thao tác được với button -->
+                                        <button class="btn" disabled>10:30</button>
+                                        <button class="btn">12:30</button>
+                                        <button class="btn">14:30</button>
+                                        <button class="btn">16:30</button>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3  text-md-right showTimes__mins mt-3 mt-md-0">
+                                    <span>105 MINS</span>
+                                    <span>15</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tue" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="row py-5 showTimes__row">
+                        <div class="col-12 col-md-3 col-lg-2">
+                            <img class="img-fluid" src="./img/movie-7.jpg" alt="">
+                        </div>
+                        <div class="col-12 col-md-9 col-lg-10 mt-3 mt-md-0">
+                            <p>ACTION, ADVENTURE, FANTASY</p>
+                            <h3>Captain America: The First Avenger</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam laboriosam illo nulla
+                                omnis assumenda reprehenderit provident alias consectetur rem dolorum.</p>
+                            <p><a href="#">FULL SYNOPYY <i class="fa fa-angle-double-right"></i></a></p>
+
+                            <div class="row showTimes__runningTimes">
+                                <div class="col-12 col-md-9 d-lg-flex align-items-center">
+                                    <span><i class="fa fa-clock"></i> VIEWING TIME</span>
+                                    <div>
+                                        <!-- disabled: chỉ đọc không thao tác được với button -->
+                                        <button class="btn" disabled>10:30</button>
+                                        <button class="btn">12:30</button>
+                                        <button class="btn">14:30</button>
+                                        <button class="btn">16:30</button>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3  text-md-right showTimes__mins mt-3 mt-md-0">
+                                    <span>105 MINS</span>
+                                    <span>15</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="today" role="tabpanel" aria-labelledby="contact-tab">
+                    <div class="row py-5 showTimes__row">
+                        <div class="col-12 col-md-3 col-lg-2">
+                            <img class="img-fluid" src="./img/movie-6.jpg" alt="">
+                        </div>
+                        <div class="col-12 col-md-9 col-lg-10 mt-3 mt-md-0">
+                            <p>ACTION, ADVENTURE, FANTASY</p>
+                            <h3>Captain America: The First Avenger</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam laboriosam illo nulla
+                                omnis assumenda reprehenderit provident alias consectetur rem dolorum.</p>
+                            <p><a href="#">FULL SYNOPYY <i class="fa fa-angle-double-right"></i></a></p>
+
+                            <div class="row showTimes__runningTimes">
+                                <div class="col-12 col-md-9 d-lg-flex align-items-center">
+                                    <span><i class="fa fa-clock"></i> VIEWING TIME</span>
+                                    <div>
+                                        <!-- disabled: chỉ đọc không thao tác được với button -->
+                                        <button class="btn" disabled>10:30</button>
+                                        <button class="btn">12:30</button>
+                                        <button class="btn">14:30</button>
+                                        <button class="btn">16:30</button>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3  text-md-right showTimes__mins mt-3 mt-md-0">
+                                    <span>105 MINS</span>
+                                    <span>15</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="thu" role="tabpanel" aria-labelledby="contact-tab">
+                    <div class="row py-5 showTimes__row">
+                        <div class="col-12 col-md-3 col-lg-2">
+                            <img class="img-fluid" src="./img/movie-11.jpg" alt="">
+                        </div>
+                        <div class="col-12 col-md-9 col-lg-10 mt-3 mt-md-0">
+                            <p>ACTION, ADVENTURE, FANTASY</p>
+                            <h3>Captain America: The First Avenger</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam laboriosam illo nulla
+                                omnis assumenda reprehenderit provident alias consectetur rem dolorum.</p>
+                            <p><a href="#">FULL SYNOPYY <i class="fa fa-angle-double-right"></i></a></p>
+
+                            <div class="row showTimes__runningTimes">
+                                <div class="col-12 col-md-9 d-lg-flex align-items-center">
+                                    <span><i class="fa fa-clock"></i> VIEWING TIME</span>
+                                    <div>
+                                        <!-- disabled: chỉ đọc không thao tác được với button -->
+                                        <button class="btn" disabled>10:30</button>
+                                        <button class="btn">12:30</button>
+                                        <button class="btn">14:30</button>
+                                        <button class="btn">16:30</button>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3  text-md-right showTimes__mins mt-3 mt-md-0">
+                                    <span>105 MINS</span>
+                                    <span>15</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="fri" role="tabpanel" aria-labelledby="contact-tab">
+                    <div class="row py-5 showTimes__row">
+                        <div class="col-12 col-md-3 col-lg-2">
+                            <img class="img-fluid" src="./img/movie-9.jpg" alt="">
+                        </div>
+                        <div class="col-12 col-md-9 col-lg-10 mt-3 mt-md-0">
+                            <p>ACTION, ADVENTURE, FANTASY</p>
+                            <h3>Captain America: The First Avenger</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam laboriosam illo nulla
+                                omnis assumenda reprehenderit provident alias consectetur rem dolorum.</p>
+                            <p><a href="#">FULL SYNOPYY <i class="fa fa-angle-double-right"></i></a></p>
+
+                            <div class="row showTimes__runningTimes">
+                                <div class="col-12 col-md-9 d-lg-flex align-items-center">
+                                    <span><i class="fa fa-clock"></i> VIEWING TIME</span>
+                                    <div>
+                                        <!-- disabled: chỉ đọc không thao tác được với button -->
+                                        <button class="btn" disabled>10:30</button>
+                                        <button class="btn">12:30</button>
+                                        <button class="btn">14:30</button>
+                                        <button class="btn">16:30</button>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3  text-md-right showTimes__mins mt-3 mt-md-0">
+                                    <span>105 MINS</span>
+                                    <span>15</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="sat" role="tabpanel" aria-labelledby="contact-tab">
+                    <div class="row py-5 showTimes__row">
+                        <div class="col-12 col-md-3 col-lg-2">
+                            <img class="img-fluid" src="./img/movie-8.jpg" alt="">
+                        </div>
+                        <div class="col-12 col-md-9 col-lg-10 mt-3 mt-md-0">
+                            <p>ACTION, ADVENTURE, FANTASY</p>
+                            <h3>Captain America: The First Avenger</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam laboriosam illo nulla
+                                omnis assumenda reprehenderit provident alias consectetur rem dolorum.</p>
+                            <p><a href="#">FULL SYNOPYY <i class="fa fa-angle-double-right"></i></a></p>
+
+                            <div class="row showTimes__runningTimes">
+                                <div class="col-12 col-md-9 d-lg-flex align-items-center">
+                                    <span><i class="fa fa-clock"></i> VIEWING TIME</span>
+                                    <div>
+                                        <!-- disabled: chỉ đọc không thao tác được với button -->
+                                        <button class="btn" disabled>10:30</button>
+                                        <button class="btn">12:30</button>
+                                        <button class="btn">14:30</button>
+                                        <button class="btn">16:30</button>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3  text-md-right showTimes__mins mt-3 mt-md-0">
+                                    <span>105 MINS</span>
+                                    <span>15</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="sun" role="tabpanel" aria-labelledby="contact-tab">
+                    <div class="row py-5 showTimes__row">
+                        <div class="col-12 col-md-3 col-lg-2">
+                            <img class="img-fluid" src="./img/movie-7.jpg" alt="">
+                        </div>
+                        <div class="col-12 col-md-9 col-lg-10 mt-3 mt-md-0">
+                            <p>ACTION, ADVENTURE, FANTASY</p>
+                            <h3>Captain America: The First Avenger</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam laboriosam illo nulla
+                                omnis assumenda reprehenderit provident alias consectetur rem dolorum.</p>
+                            <p><a href="#">FULL SYNOPYY <i class="fa fa-angle-double-right"></i></a></p>
+
+                            <div class="row showTimes__runningTimes">
+                                <div class="col-12 col-md-9 d-lg-flex align-items-center">
+                                    <span><i class="fa fa-clock"></i> VIEWING TIME</span>
+                                    <div>
+                                        <!-- disabled: chỉ đọc không thao tác được với button -->
+                                        <button class="btn" disabled>10:30</button>
+                                        <button class="btn">12:30</button>
+                                        <button class="btn">14:30</button>
+                                        <button class="btn">16:30</button>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3  text-md-right showTimes__mins mt-3 mt-md-0">
+                                    <span>105 MINS</span>
+                                    <span>15</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- COMMINGSOON -->
+    <section class="commingSoon section">
+        <div class="container-md">
+            <h2 class="title title--while">COMING SOON</h2>
+            <div class="row align-items-center">
+                <div class="col-12 col-sm-6">
+                    <p>COMEDY, CRIME</p>
+                    <h3>The Hangover III</h3>
+                    <div class="commingSoon__write">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>
+                            <i class="fa fa-calendar-alt mx-3"></i>
+                            30 Septemper 2020
+                        </span>
+                    </div>
+                    <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab libero minus aperiam
+                        nihil repellat quae iste error, inventore laborum qui?</p>
+                    <a href="#">MORE INFO <i class="fa fa-angle-double-right"></i></a>
+                </div>
+                <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                    <a class="my-video-links my-link"  data-vbtype="video" href="https://youtu.be/Ly1qsbV3dLo">
+                        <div class="commingSoon__video">
+                            <img class="img-fluid" src="./img/slide-3-video.png" alt="">
+                            <i class="fa fa-play"></i>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- MOVIELIST -->
+    <section class="movieList section">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-lg-2 mb-3 mb-lg-0">
+                    <div class="movieList__item">
+                        <img class="img-fluid" src="./img/movie-9.jpg" alt="">
+                        <div class="movieList__overlay"></div>
+                    </div>
+                </div>
+                <div class="col-4 col-lg-2 mb-3 mb-lg-0">
+                    <div class="movieList__item">
+                        <img class="img-fluid" src="./img/movie-8.jpg" alt="">
+                        <div class="movieList__overlay"></div>
+                    </div>
+                </div>
+                <div class="col-4 col-lg-2 mb-3 mb-lg-0">
+                    <div class="movieList__item">
+                        <img class="img-fluid" src="./img/movie-11.jpg" alt="">
+                        <div class="movieList__overlay"></div>
+                    </div>
+                </div>
+                <div class="col-4 col-lg-2">
+                    <div class="movieList__item">
+                        <img class="img-fluid" src="./img/movie-13.jpg" alt="">
+                        <div class="movieList__overlay"></div>
+                    </div>
+                </div>
+                <div class="col-4 col-lg-2">
+                    <div class="movieList__item">
+                        <img class="img-fluid" src="./img/movie-12.jpg" alt="">
+                        <div class="movieList__overlay"></div>
+                    </div>
+                </div>
+                <div class="col-4 col-lg-2">
+                    <div class="movieList__item">
+                        <img class="img-fluid" src="./img/movie-14.jpg" alt="">
+                        <div class="movieList__overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT -->
+    <section class="contact section">
+        <div class="contact__content container">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p><a href="tel:0961051014">096 105 1014</a></p>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row section">
+                <div class="col-12 col-md-3">
+                    <h3>GET In TOUCH</h3>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Give a feedback</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h3>ABOUT MOVIE STAR</h3>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Find us</a></li>
+                        <li><a href="#">schedule</a></li>
+                        <li><a href="#">News</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h3>LEGAL STUFF</h3>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Cookie policy</a></li>               
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h3>CONNECT WITH US</h3>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-google-plus-g"></i> Google+</a></li>                   
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <p>2020 @ Movie Cyber/ Cybersoft</p>
+            </div>
+        </div>
+      
+    </footer>
+
+
+    <!-- Thư viện hỗ trợ -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- BS4 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <!-- VENOBOX JS -->
+    <script src="./js/venobox.min.js"></script>
+    <script>
+        new VenoBox({
+            selector: ".my-link"
+        });
+    </script>
+
+    <!-- MAIN JS -->
+    <script>
+
+        window.onscroll = function () {
+            // code tạo hiệu ứng xuất hiện thanh màu đen khi roll
+            if (document.body.srollTop > 200 || document.documentElement.scrollTop > 200) {
+                document.getElementById("headerFixed").style.transform = "translate(-50%, 0%)";
+            } else {
+                document.getElementById("headerFixed").style.transform = "translate(-50%, -100%)";
+            }
+        }
+    </script>
+</body>
+
+</html>
