@@ -1,0 +1,41 @@
+package com.example.Practice.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.Practice.dto.UserDTO;
+import com.example.Practice.entity.Users;
+import com.example.Practice.reponsitory.UserReponsitory;
+import com.example.Practice.service.imp.UserServiceImp;
+
+@Service
+public class UserService implements UserServiceImp{
+	
+	@Autowired
+	UserReponsitory reponsitory;
+	
+	
+	List<Users> listUser = new ArrayList<Users>();
+
+	@Override
+	public List<UserDTO> getAllUser(String username, String password){ 
+		
+		listUser = reponsitory.findByUserNameAndPassword(username, password);
+		List<UserDTO> listUserDTO = new ArrayList<UserDTO>();
+		
+		for(Users user: listUser) {
+			UserDTO userDTO = new UserDTO();
+			
+			userDTO.setUsername(user.getUserName());
+			userDTO.setPassword(user.getPassword());
+			userDTO.setFullname(user.getFullName());
+			
+			listUserDTO.add(userDTO);
+		}
+		
+		return listUserDTO;
+	}
+}

@@ -1,0 +1,20 @@
+package com.example.Practice.service.imp;
+
+
+import com.example.Practice.dto.UserDTO;
+import com.example.Practice.payload.request.SignUpRequest;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+//  Khử sự phụ thuộc
+@Service
+public interface LoginServiceImp {
+
+    List<UserDTO> getAllUsers();
+    boolean checkLogin(String username, String password);
+
+    boolean addUser(SignUpRequest signUpRequest);
+
+
+}

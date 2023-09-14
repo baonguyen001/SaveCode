@@ -1,0 +1,15 @@
+INDEX VERSION 1.134
+D:\Workspace\Java\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4229321654.index
+\ThucHanhCRM\src\main\java
+D:\Workspace\Java\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\28780110.index
+\crm\src\main\java
+D:\Workspace\Java\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1423366800.index
+\CRM\src\main\java
+D:\Workspace\Java\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2059815293.index
+\ThucHanhCRM\src\main\java
+D:\Workspace\Java\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1089860242.index
+\ThucHanh\src\main\java
+D:\Workspace\Java\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\166610798.index
+\CRM\src\main\java
+D:\Workspace\Java\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\173044835.index
+\design\src\main\java

@@ -1,0 +1,13 @@
+package com.example.Practice.service.imp;
+
+
+
+import com.example.Practice.dto.UserDTO;
+
+import java.util.List;
+
+public interface UserServiceImp {
+
+    List<UserDTO> getAllUsers();
+
+}

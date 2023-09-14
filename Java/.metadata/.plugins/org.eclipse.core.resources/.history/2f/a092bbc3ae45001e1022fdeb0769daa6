@@ -1,0 +1,16 @@
+package com.example.Practice.reponsitory;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.example.practice.entity.Users;
+
+@Repository
+public interface UserReponsitory extends JpaRepository<Users, Integer> {
+	
+	List<Users> findAll(String username, String password);
+	Users findUsernameAndPassword(String username, String password);
+	 
+}

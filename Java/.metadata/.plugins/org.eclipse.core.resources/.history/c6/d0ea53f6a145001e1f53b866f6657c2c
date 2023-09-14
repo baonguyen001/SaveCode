@@ -1,0 +1,73 @@
+package com.example.Practice.controller;
+
+
+import com.example.Practice.payload.ResponData;
+import com.example.Practice.payload.request.SignUpRequest;
+import com.example.Practice.service.imp.LoginServiceImp;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import javax.crypto.SecretKey;
+import java.util.Base64;
+
+@RestController //Viết Api
+@CrossOrigin("*")
+@RequestMapping("/login")
+public class LoginController {
+
+    @Autowired
+    LoginServiceImp loginServiceImp; //kích hoạt hàm trong implement. Những class nào sử dụng hàm trong Imp sẽ đc thực hiện code
+    // Tương đương LoginServiceImp loginServiceImp = new LoginService();
+
+
+    //ResponseEntity<?> trả về 1 đối tượng "?" trả về kiểu dữ liệu bất kì
+    //@RequestParam : Nhận tham số trong phương thức post
+    @PostMapping("/signin")
+    public ResponseEntity<?> signin(@RequestParam String username, @RequestParam String password){
+
+//        //Sau khi lấy key có thể xóa
+//        //JWT
+//        //tạo key
+//        //SignatureAlgorithm.HS256 : key sinh ra có chiều dài 256 kí tự
+//        SecretKey secretKey = Keys.secretKeyFor(SignatureAlgorithm.HS256);
+//        //Lấy key lưu trữ trong application.yml
+//        String encrypted = Encoders.BASE64.encode(secretKey.getEncoded());
+//        System.out.println(encrypted);
+
+        ResponData responData = new ResponData();
+            if(loginServiceImp.checkLogin(username, password)){
+              responData.setData(true);
+              responData.setData(true);
+
+            }else {
+                responData.setSuccess(false);
+                responData.setData("");
+            }
+
+        return new ResponseEntity<>(responData, HttpStatus.OK);
+    }
+
+    @PostMapping("/signup")
+    public ResponseEntity<?> signup(@RequestBody SignUpRequest signUpRequest){
+        ResponData responData = new ResponData();
+
+        responData.setData( loginServiceImp.addUser(signUpRequest));
+
+        return new ResponseEntity<>(responData, HttpStatus.OK);
+    }
+
+    @GetMapping("/getAllUser")
+    public ResponseEntity<?> getAllUsers(){
+        ResponData responData = new ResponData();
+
+        responData.setData( loginServiceImp.getAllUsers());
+
+        return new ResponseEntity<>(responData, HttpStatus.OK);
+    }
+
+
+
+}
