@@ -2,18 +2,22 @@ package com.example.Practice.controller;
 
 import com.example.Practice.Utils.JwtUtilsHelper;
 import com.example.Practice.payload.request.SignUpRequest;
+import com.example.Practice.service.imp.FileServiceImp;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Encoders;
 import io.jsonwebtoken.security.Keys;
 import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.core.io.Resource;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.example.Practice.payload.DataResponse;
 import com.example.Practice.service.imp.UserServiceImp;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.crypto.SecretKey;
 
@@ -27,7 +31,6 @@ public class LoginController {
 
 	@Autowired
 	JwtUtilsHelper jwtUtilsHelper;
-
 
 	//Lấy danh sách Users
 	@PostMapping("/getAllUser")
@@ -77,6 +80,6 @@ public class LoginController {
 		return new ResponseEntity<>(dataResponse, HttpStatus.OK);
 	}
 
-	
+
 
 }

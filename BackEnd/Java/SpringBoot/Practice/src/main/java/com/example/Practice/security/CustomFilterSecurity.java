@@ -43,10 +43,12 @@ public class CustomFilterSecurity {
 
         http.csrf()
                 .disable()
+                .cors()
+                .disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeHttpRequests()
-                .requestMatchers("")
+                .requestMatchers("/login/**", "/restaurant/file/**")
                 .permitAll()
                 .anyRequest()
                 .authenticated();
