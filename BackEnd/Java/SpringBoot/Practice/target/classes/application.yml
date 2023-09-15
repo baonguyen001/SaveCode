@@ -17,3 +17,6 @@ spring:
 
 jwt:
     Privatekey: tOsvrOmY3v+yIfaLsbPRElQCyVa9rxstdRzlymkrjg0=s
+
+fileUpload:
+    rootPath: C:\Users\Acer\Desktop\Uploads2
