@@ -33,8 +33,6 @@ public class CustomJwtFilterSecurity extends OncePerRequestFilter {
                 UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken("", "", new ArrayList<>());
                 SecurityContext securityContext = SecurityContextHolder.getContext();
                 securityContext.setAuthentication(authenticationToken);
-                System.out.println(token);
-
             }
         }
 

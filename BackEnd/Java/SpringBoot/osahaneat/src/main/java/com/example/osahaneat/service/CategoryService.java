@@ -23,7 +23,7 @@ public class CategoryService implements CategoryServiceImp {
     @Override
     public List<CategoryDTO> getCategoryHomePage() {
         //Chỉ lấy 2 Category ở trang 0  trong CSDL sắp xếp theo id
-        PageRequest pageRequest = PageRequest.of(0, 2, Sort.by("id"));
+        PageRequest pageRequest = PageRequest.of(0, 3, Sort.by("id"));
         Page<Category> listCategory = categoryReponsitory.findAll(pageRequest);
 
         List<CategoryDTO> listCategoryDTO = new ArrayList<>();
