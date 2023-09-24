@@ -1,8 +1,9 @@
 package com.example.osahaneat.service;
 
+import com.example.osahaneat.dto.CategoryDTO;
+import com.example.osahaneat.dto.MenuDTO;
 import com.example.osahaneat.dto.RestaurantDTO;
-import com.example.osahaneat.entity.RatingRestaurant;
-import com.example.osahaneat.entity.Restaurant;
+import com.example.osahaneat.entity.*;
 import com.example.osahaneat.reponsitory.RestaurantReponsitory;
 import com.example.osahaneat.service.imp.FileServiceImp;
 import com.example.osahaneat.service.imp.RestaurantServiceImp;
@@ -12,11 +13,10 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.awt.*;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
+import java.util.*;
 import java.util.List;
-import java.util.Set;
 
 @Service
 public class RestaurantService implements RestaurantServiceImp {
@@ -79,6 +79,42 @@ public class RestaurantService implements RestaurantServiceImp {
         }
 
         return listRestaurantDTO;
+    }
+
+    @Override
+    public RestaurantDTO getDetailsRestaurant(int id) {
+        Optional<Restaurant> restaurant = restaurantReponsitory.findById(id);
+        RestaurantDTO restaurantDTO = new RestaurantDTO();
+        if(restaurant.isPresent()){
+            List<CategoryDTO> listCategoryDTO = new ArrayList<>();
+
+
+            restaurantDTO.setTitle(restaurant.get().getTitle());
+            restaurantDTO.setSubTitle(restaurant.get().getSubtitle());
+            restaurantDTO.setImage(restaurant.get().getImage());
+            restaurantDTO.setRating(caculatorRating(restaurant.get().getListRatingRestaurants()));
+            restaurantDTO.setFreeShip(restaurant.get().getFreeship());
+            restaurantDTO.setOpenDate(restaurant.get().getOpenDate());
+
+            for (MenuRestaurant data: restaurant.get().getListMenuRestaurants()) {
+                List<MenuDTO> listMenuDTO = new ArrayList<>();
+                CategoryDTO categoryDTO = new CategoryDTO();
+                categoryDTO.setName(data.getCategory().getNameCate());
+
+                for(Food food: data.getCategory().getListFoot()){
+                    MenuDTO menuDTO = new MenuDTO();
+                    menuDTO.setImage(food.getImage());
+                    menuDTO.setTitle(food.getTitle());
+                    menuDTO.setFreeship(food.isFreeShip());
+
+                    listMenuDTO.add(menuDTO);
+                }
+                categoryDTO.setMenus(listMenuDTO);
+                listCategoryDTO.add(categoryDTO);
+            }
+            restaurantDTO.setCategorys(listCategoryDTO);
+        }
+        return null;
     }
 
     private double caculatorRating(Set<RatingRestaurant> listRating){

@@ -1,6 +1,8 @@
 $(document).ready(function () {
- 
+
     var linkRestaurant = "http://localhost:8083/restaurant"
+    var linkCategory = "http://localhost:8083/category"
+    var linkMenu = "http://localhost:8083/menu"
     var token = localStorage.getItem("token")
     console.log(token)
 
@@ -11,11 +13,10 @@ $(document).ready(function () {
             'Authorization': `Bearer ${token}`
         }
     })
-    //msg đại diện cho giá trị backend trả ra
+        //msg đại diện cho giá trị backend trả ra
         .done(function (msg) {
-            if(msg.success){
-                $.each(msg.data, function(index, value){
-                    console.log(value)
+            if (msg.success) {
+                $.each(msg.data, function (index, value) {
                     var html = `<a href="detail.html" class="text-dark text-decoration-none col-xl-4 col-lg-12 col-md-12">
                                 <div class="bg-white shadow-sm rounded d-flex align-items-center p-1 mb-4 osahan-list">
                                     <div class="bg-light p-3 rounded">
@@ -35,15 +36,52 @@ $(document).ready(function () {
                                     </div>
                                 </div>
                             </a>`
-    
-                     $("#featured-restaurant").append(html)
+
+                    $("#featured-restaurant").append(html)
 
                 })
-               
             }
+        });
 
-          
-            console.log(msg)  
+
+    // 
+    $.ajax({
+        method: "GET",
+        url: linkCategory,
+        headers: {
+            'Authorization': `Bearer ${token}`
+        }
+    })
+        .done(function (msg) {
+            if (msg.success) {
+                $.each(msg.data, function (index, value) {
+                    if (value.menus.length > 0) {
+                        //Hien thi category
+                        var htmlCategory = ` <div class="d-flex align-items-center justify-content-between mb-3 mt-2">
+                            <h5 class="mb-0">${value.name}</h5>
+                            <a href="listing.html" class="small font-weight-bold text-dark">See all <i
+                            class="mdi mdi-chevron-right mr-2"></i></a>
+                            </div>`
+                        htmlCategory += '<div class="row">'
+                        $.each(value.menus, function (index, data) {
+                            htmlCategory += ` <a href="#" class="text-decoration-none col-xl-4 col-md-4 mb-4" data-toggle="modal"
+                            data-target="#myitemsModal">
+                            <img src="${linkMenu}/file/${data.image}" class="img-fluid rounded">
+                            <div class="d-flex align-items-center mt-3">
+                            <p class="text-black h6 m-0">${data.title}</p>
+                            <span class="badge badge-light ml-auto"><i class="mdi mdi-truck-fast-outline"></i> Free
+                                delivery</span>
+                            </div>
+                            </a>`
+                        })
+                        htmlCategory += '</div>'
+
+                        $("#body-osahaneat").append(htmlCategory)
+                    }
+
+                })
+            }
+            console.log(msg)
         });
 })
 
