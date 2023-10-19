@@ -18,12 +18,12 @@ $color-puple: #5e1a52;
 
 
 // font-size
-$fs-0: 15px;
-$fs-1: 13px;
-$fs-2: 40px;
-$fs-3: 18px;
+$fs-0: 13px;
+$fs-1: 15px;
+$fs-2: 18px;
+$fs-3: 24px;
 $fs-4: 36px;
-$fs-5: 24px;
+$fs-5: 40px;
 $fs-6: 50px;
 
 
@@ -37,13 +37,14 @@ $line-height-0: 1.43;
 
 // margin
 $mg-0: 5px;
-$mg-1: 25px;
-$mg-2: 20px;
+$mg-1: 20px;
+$mg-2: 25px;
+
 
 // padding
-$pd-0: 10px;
-$pd-1: 15px;
-$pd-2: 5px;
+$pd-0: 5px;
+$pd-1: 10px;
+$pd-2: 15px;
 $pd-3: 20px;
 
 // border-radius
@@ -56,6 +57,5 @@ $breakpoints:(
     'extra-large': 1200px,
     'large': 992px,
     'medium': 768px,
-    'small': 576px,
-
+    'small': 576px
 )

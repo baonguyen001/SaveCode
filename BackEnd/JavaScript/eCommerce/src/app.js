@@ -8,14 +8,17 @@ const app = express()
 app.use(morgan("dev"))  //ghi lại các request, nhật kí
 app.use(helmet())       //Bảo mật thông tin sử dụng
 app.use(compression())  //Tiết kiệm lưu lượng vận chuyển
+
 // init db
+require('./dbs/init.mongodb')
+
 
 // init router
 app.get('/hello', (req, res, next) =>{
     const temp = 'Hello JavaScript'
     return res.status(200).json({
         message: 'Một gậy bay màu!',
-        metadata: temp.repeat(1000)
+        // metadata: temp.repeat(1000)
     })
 })
 

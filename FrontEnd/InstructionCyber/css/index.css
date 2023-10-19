@@ -1,0 +1,98 @@
+/* GLOBAL */
+html,body{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+}
+/* HEADER */
+.header__top{
+    background-color: #ff4f81;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.header__top a{
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+.header__left{
+  padding-top: 3px;
+}
+.header__left a:hover{
+  color: black !important;
+}
+
+.header__top .header_right a{
+    margin-left: 0.25rem;
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border: 1px solid black;
+    /* thẻ a thuộc loại inline ko xét đc kích thước */
+  display: inline-block;
+    /* Chỉnh icon ra giữa  text-align: center; line-height = height*/
+  text-align: center;
+  line-height: 30px;
+}
+.header_right a:hover{
+  background-color: #ff4f81;
+  border-color: white;
+}
+
+.navbarInstruction a{
+    color: black;
+}
+.navbarInstruction .navbar-brand p:first-child{
+  font-size: 36px;
+  font-weight: bold;
+}
+.navbarInstruction .navbar-brand p:last-child{
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #ff4f81;
+}
+.navbarInstruction .navbar-brand i{
+  transform: skewX(-10deg);
+}
+.navbarInstruction .nav-item::after{
+  content: '';
+  width: 0%;
+  height: 2.5px;
+  background-color: #ff4f81;
+  display: block;
+  transition: 0.5s;
+}
+.navbarInstruction .nav-item:hover::after{
+  width: 100%;
+}
+.navbarInstruction .nav-item{
+  margin: 0 15px;
+}
+.collapse .navbar-nav .nav-link{
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: all 0.5s;
+}
+.navbarInstruction .nav-item:hover .nav-link{
+  color: #ff4f81;
+}
+.navbarInstruction .nav-item.active::after{
+  color: #ff4f81;
+  width: 100%;
+}
+.navbarInstruction .dropdown-menu{
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid  rgba(0, 0, 0, 0.6);
+}
+.navbarInstruction .dropdown-menu a{
+  color: white;
+  font-size: 14px;
+  transition: 0.5s;
+}
+.navbarInstruction .dropdown-menu a:hover{
+  color: #ff4f81;
+  background-color: transparent;
+
+}
+
+/* CAROUSEL */
