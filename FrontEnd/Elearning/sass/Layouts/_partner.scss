@@ -1,0 +1,68 @@
+.partner {
+    background-color: $color-gray-5;
+    padding-top: $pd-3;
+
+    .partner__content {
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+
+        .partner__logo {
+            display: flex;
+            justify-content: space-around;
+            margin: $mg-2 0;
+        }
+
+        .partner__text {
+            padding: 45px 0 45px;
+            .text__left{
+                border-right: 1px solid #dee2e6;
+            }
+
+            .col-6 {
+                h3 {
+                    @include styleText($color-black-light, $fs-2 + 1, $fw-0);
+                }
+                padding: 0 50px 50px;
+
+            }
+        }
+    }
+
+    @include responsive("extra-large") {
+        .partner__content {
+            width: 80%;
+        }
+    }
+    @include responsive("large") {
+        .partner__content {
+            width: 90%;
+        }
+    }
+    @include responsive("medium") {
+        .partner__content {
+            width: 70%;
+            .partner__logo{
+                flex-wrap: wrap;
+                .partner__item{
+                    width: 50%;
+                    text-align: center;
+                    margin-bottom: $mg-0 + 5;
+                }
+                .border-right{
+                    border: none;
+                }
+            }
+            .partner__text{
+                .text__left{
+                    padding-bottom: 32px;
+                    border: none;
+                }
+                .text__right{
+                    padding-bottom: 0px;
+                }
+            }
+        }
+      
+    }
+}

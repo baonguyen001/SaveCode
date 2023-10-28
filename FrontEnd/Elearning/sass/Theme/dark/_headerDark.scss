@@ -1,0 +1,64 @@
+.darkMode {
+    .myNavbar {
+        background-color: $color-dark-4;
+        
+        .myNavbar__left {
+            .navbar-brand {
+                .logoBlack {
+                    display: none;
+                }
+
+                .logoWhite {
+                    display: inline;
+                }
+            }
+
+            .myNarbar__categories {
+                color: $color-dark-3;
+
+                i {
+                    color: $color-dark-5;
+                }
+            }
+
+            .myNarbar__form-search {
+                @include styleFormSearch($color-dark-0, $color-dark-6, $color-dark-2, $color-dark-5);
+            }
+
+        }
+
+        .myNarbar__right {
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        color: $color-dark-3;
+                        border: 1px solid transparent;
+                        &:hover {
+                            background-color: $color-dark-0;
+                            border: 1px solid $color-dark-2;
+                        }
+
+                    }
+
+                    .overlay {
+                        background-color: $color-dark-4;
+                        border: 2px solid $color-dark-2;
+                        &::before {
+                            background-color: $color-dark-4;
+                            border-top: 1px solid $color-dark-2;
+                            border-left: 1px solid $color-dark-2;
+                        }
+                    }
+                }
+                .myNarbar__button {
+                    &:hover{
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+        .navbar-toggler{
+            background-color: $color-dark-5;
+        }
+    }
+}

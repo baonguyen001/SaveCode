@@ -1,0 +1,34 @@
+.darkMode {
+    .student {
+        background-color: $color-dark-0;
+
+        .student__content {
+            h2 {
+                color: $color-dark-5;
+            }
+
+            .student__carousel {
+                .card {
+                    background-color: $color-dark-6;
+
+                    .card__avatar {
+                        .card__name {
+                            h5 {
+                                color: $color-dark-5;
+                            }
+                        }
+                    }
+
+                    .card-body {
+                        background-color: $color-dark-6;
+
+                        .card-text {
+                            color: $color-dark-3;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

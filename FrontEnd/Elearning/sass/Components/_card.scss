@@ -1,0 +1,81 @@
+.card {
+    height: 275px;
+    margin-right: 1px;
+
+    .card-body {
+        padding: 1rem;
+
+        .card-title {
+            @include styleText($color-black-0, $fs-1, $fw-1);
+        }
+
+        .card-text {
+            @include styleText($color-gray-0, $fs-0 - 1, $fw-0);
+            margin: $mg-0 0;
+        }
+
+        .card__start {
+            i {
+                @include styleText($color-yellow-0, $fs-0 - 1, $fw-3);
+            }
+
+            span:nth-child(2) {
+                @include styleText($color-gray-0, $fs-0, $fw-1);
+            }
+
+            span:nth-child(3) {
+                @include styleText($color-gray-0, $fs-0, $fw-0);
+            }
+        }
+
+        .card__prices {
+            padding: $pd-1 - 2 0;
+            text-align: right;
+
+            span {
+                &:first-child {
+                    @include styleText($color-gray-0, $fs-0, $fw-0);
+                    text-decoration: line-through;
+                }
+
+                &:last-child {
+                    @include styleText($color-gray-0, $fs-1, $fw-1);
+                }
+            }
+        }
+    }
+}
+
+.card--feelback {
+    height: 280px;
+
+    .card__avatar {
+        display: flex;
+        padding: 40px 30px 20px;
+
+        img {
+            margin-right: $mg-2 - 5;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+        }
+
+        .card__name {
+            h5{
+                margin-bottom: 0;
+            }
+            i {
+                color: $color-yellow-0;
+            }
+        }
+    }
+
+    .card-body {
+        padding: 0 30px;
+
+        .card-text {
+            @include styleText($color-black-0, $fs-1, $fw-0);
+            line-height: 1.43;
+        }
+    }
+}

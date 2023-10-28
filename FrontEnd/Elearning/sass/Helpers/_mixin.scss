@@ -1,0 +1,94 @@
+// Không có tham số
+// @mixin styleText {
+//     color: white;
+//     font-size: 13px;
+// }
+
+// Có tham số
+@mixin styleText($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin styleButtom($color, $bg-color, $border, $fs, $fw,$py ,$px){
+    color: $color;
+    background-color: $bg-color;
+    border: 1px solid $border;
+    font-size:  $fs;
+    font-weight:  $fw;
+    padding: $py $px;
+    cursor: pointer;
+}
+
+@mixin hoverButtom($color, $bg-color, $border){
+    color: $color;
+    background-color: $bg-color;
+    border: 1px solid $border;
+}
+
+@mixin styleFormSearch($bg-color, $bg-color-focus, $border-color, $color){
+    .input-group {
+        background-color: $bg-color;
+
+        .form-control {
+            border-color: transparent;
+            background-color: transparent;
+            box-shadow: none;
+            transition: none;
+            color: $color;
+
+            &::placeholder {
+                color: $color;
+
+            }
+
+            &:focus {
+                background-color: $bg-color-focus;
+                border-top-color: $border-color;
+                border-bottom-color: $border-color;
+                border-left-color: $border-color;
+            }
+
+            // =====================================
+            // Thêm sự kiện focus cho 2 thẻ cùng lúc
+            &:focus+.input-group-append {
+                .input-group-text {
+                    background-color: $bg-color-focus;
+                    border-top-color: $border-color;
+                    border-bottom-color: $border-color;
+                    border-right-color: $border-color;
+
+                    &:hover {
+                        background-color: $color-red-0;
+                        color: $color-white-0;
+                    }
+                }
+            }
+        }
+
+        .input-group-text {
+            border-color: transparent;
+            background-color: transparent;
+            color: $color-red-0;
+
+            &:hover {
+                background-color: $color-red-0;
+                color: $color-white-0;
+            }
+        }
+    }
+}
+
+
+@mixin responsive($screen){
+    @if map-has-key($map: $breakpoints, $key: $screen){     //Nếu tìm thấy giá trị
+        $value: map-get($map: $breakpoints, $key:$screen);  //gắn giá trị cho $value
+        @media screen and (max-width: $value) {             
+            @content;                                       //các chỉnh sửa responsive
+        }
+    }
+    @else{
+        @warn "`{$screen}` isn't exits in breakpoins";
+    }
+}

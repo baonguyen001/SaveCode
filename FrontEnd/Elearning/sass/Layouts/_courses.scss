@@ -1,0 +1,74 @@
+.courses {
+    margin: $mg-2 0;
+
+    .courses__content {
+        .row {
+            margin: 0 0;
+        }
+
+        width: 90%;
+        margin: auto;
+
+        .courses__left {
+            background-color: $color-gray-1;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+
+            h2 {
+                @include styleText($color-black-0, $fs-2 + 1, $fw-0);
+            }
+        }
+
+        .courses__right {
+            #myTab {
+                margin-bottom: $mg-2;
+
+                .nav-link {
+                    @include styleText($color-black-0, $fs-1, $fw-0);
+
+                    &:hover {
+                        border-color: transparent;
+                        @include styleText($color-blue-0, $fs-1, $fw-0);
+
+                    }
+
+                    &.active {
+                        border: none;
+                        border-bottom: 5px solid $color-blue-0;
+                    }
+                }
+            }
+
+        }
+    }
+
+    @include responsive("medium") {
+        .courses__content {
+            .courses__left {
+                padding: $pd-2 2rem;
+
+            }
+        }
+    }
+
+    // 1368
+    @include responsive("screen-1") {
+
+        // c1: sua so chu trong js
+        .courses__content {
+            .card {
+                .card-body {
+                    padding: 13px;
+                    .card-title {
+                        @include styleText($color-black-0, $fs-0 - 1, $fw-1);
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        //c2: giam fs 13px
+
+    }
+}

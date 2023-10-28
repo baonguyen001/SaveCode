@@ -1,0 +1,15 @@
+.darkMode{
+    .partner {
+    background-color: $color-dark-0;
+        .partner__content{
+            .partner__text{
+                .text__left{
+                    border-right: 1px solid $color-dark-2;
+                }
+                h3{
+                    color: $color-dark-5;
+                }
+            }
+        }
+    }
+}

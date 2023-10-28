@@ -1,0 +1,21 @@
+.button--white{
+    @include styleButtom($color-gray-0, $color-white-0, $color-black-light, $fs-1, $fw-1, $pd-1 + 1, $pd-1 + 2);
+    &:hover{
+        @include hoverButtom($color-black-0,transparent ,$color-black-0)
+    }
+}
+
+
+.button--red{
+    @include styleButtom($color-white-0, $color-red-0, $color-red-0, $fs-1, $fw-1, $pd-1 + 1, $pd-1 + 2);
+    &:hover{
+        @include hoverButtom($color-white-0,$color-red-1 ,$color-red-1)
+    }
+}
+
+.button--dropup{
+    @include styleButtom($color-gray-0, $color-white-0, $color-black-light, $fs-1, $fw-1, $pd-0 + 1, $pd-1);
+    &:hover{
+        @include hoverButtom($color-black-0,transparent ,$color-black-0)
+    }
+}

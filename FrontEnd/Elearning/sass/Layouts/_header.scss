@@ -1,9 +1,192 @@
-.myNavbar{
-    .myNavbar_left{
-        .navbar-brand{
-            img{
+.myNavbar {
+    box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1),
+        0 3px 1px 0 rgba(20, 23, 28, 0.1);
+
+    .myNavbar__left {
+        // Khi thêm d-flex, thuộc tính các con chuyển thành inline chỉ dài = nội dung nó chứa
+        display: flex;
+        align-items: center;
+
+        .navbar-brand {
+            flex-grow: 1;
+            margin-right: 0;
+            text-align: center;
+
+            img {
                 width: 110px;
+            }
+            .logoWhite{
+                display: none;
+            }
+        }
+
+        .myNarbar__categories {
+            flex-grow: 1;
+            text-align: center;
+            @include styleText($color-black-light, $fs-0, $fw-0);
+            // Đổi hình mouse
+            cursor: pointer;
+
+            i {
+                color: $color-gray-3;
+            }
+        }
+
+        .myNarbar__form-search {
+            flex-grow: 8;
+            text-align: center;
+            @include styleFormSearch($color-white-cream, $color-white-0, $color-gray-4, $color-black-light);
+        }
+    }
+
+    .myNarbar__right {
+        .navbar-nav {
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+
+            .nav-item {
+                position: relative;
+
+                .nav-link {
+                    transition: all 0.5s;
+                    @include styleText($color-black-light, $fs-0, $fw-0);
+                    padding: $pd-2 $pd-1 + 2;
+                    border-radius: $boder-radius + 1;
+
+                    &:hover {
+                        background-color: $color-gray-2;
+                    }
+                }
+
+                .overlay {
+                    background-color: $color-white-0;
+                    display: none;
+                    border: 2px solid $color-white-0;
+                    width: 330px;
+                    padding: $pd-3;
+                    position: absolute;
+                    right: 0;
+                    top: 60px;
+                    text-align: center;
+                    border-top: 1px solid $color-gray-1;
+                    box-shadow: 0 4px 16px rgba(20, 23, 28, 0.25);
+                    transition: 0.5s;
+                    z-index: 1;
+                    white-space: normal;
+
+                    &::before {
+                        content: '';
+                        width: 15px;
+                        height: 15px;
+                        background-color: $color-white-0;
+                        border-top: 1px solid $color-gray-1;
+                        border-left: 1px solid $color-gray-1;
+                        display: block;
+                        position: absolute;
+                        top: -7px;
+                        right: 21px;
+                        transform: rotate(43deg);
+                    }
+                    p{
+                        @include styleText($color-black-light, $fs-1, $fw-0);
+                    }
+                    a{
+                        text-decoration: none;
+                    }
+                }
+
+                &:hover {
+                    .overlay {
+                        display: block;
+                    }
+                }
+            }
+
+            .myNarbar__shop {
+                .nav-link {
+                    font-size: $fs-2 + 2;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    line-height: 25px;
+                }
+            }
+
+            .myNarbar__button {
+                display: flex;
+
+                .button--white {
+                    margin-right: $mg-0;
+                }
+
+                .button {
+                    white-space: nowrap;
+                }
             }
         }
     }
+
+    //max-width 1316
+    @media screen and (min-width:1200px) and (max-width: 1316px) {
+        .myNarbar__right {
+            .navbar-nav {
+                .nav-item {
+                    white-space: nowrap;
+
+                    .nav-link {
+                        font-size: $fs-0 - 1;
+                    }
+                }
+            }
+        }
+
+        .myNarbar--reset {
+            padding-left: 0;
+        }
+    }
+
+
+    //max-width 1200
+    @include responsive("extra-large") {
+
+        .business,
+        .instruction {
+            display: none;
+        }
+
+        .myNarbar__right {
+            .navbar-nav{
+                justify-content: space-around;
+            }
+            .myNarbar__shop{
+                .nav-link{
+                    margin-right: $mg-0;
+                }
+            }
+        }
+
+    }
+
+    @include responsive("medium"){
+       .myNavbar__left{
+        .myNarbar__categories, .myNarbar__form-search{
+            display: none;
+        }
+       }
+       .myNarbar__right{
+        width: 50%;
+        margin-left: auto;
+        .nav-item{
+            text-align: center;
+        }
+        .myNarbar__button{
+            .button{
+                display: none;
+
+            }
+        }
+       }
+    }
+
 }

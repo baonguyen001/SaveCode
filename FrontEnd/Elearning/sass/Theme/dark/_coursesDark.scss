@@ -1,0 +1,32 @@
+.darkMode {
+    .courses {
+        .courses__content {
+            .courses__left {
+                background-color: $color-dark-6;
+                h2 {
+                    @include styleText($color-dark-5, $fs-2 + 1, $fw-0);
+                }
+            }
+            .courses__right{
+                #myTab{
+                    border-bottom-color: $color-dark-2;
+                    .nav-item{
+                        .nav-link{
+                            &.active{
+                                background-color: $color-dark-1 ;
+
+                            }
+                            &:hover{
+                                color: $color-dark-5;
+                            }
+                        }
+                        .nav-link{
+                            color: $color-dark-3;
+                        }
+                    }
+                }
+             
+            }
+        }
+    }
+}

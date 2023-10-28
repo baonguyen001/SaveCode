@@ -1,0 +1,41 @@
+.darkMode {
+    .card {
+        border-color: $color-dark-0;
+        background-color: $color-dark-0;
+
+        .card-body {
+            background-color: $color-dark-0;
+
+            .card-title {
+                @include styleText($color-white-0, $fs-1, $fw-1);
+            }
+
+            .card-text {
+                @include styleText($color-dark-3, $fs-0 - 1, $fw-0);
+                margin: $mg-0 0;
+            }
+
+            .card__start {
+                span:nth-child(2) {
+                    color: $color-white-0;
+                }
+
+                span:nth-child(3) {
+                    color: $color-dark-3;
+                }
+            }
+
+            .card__prices {
+                span:nth-child(1) {
+                    color: $color-dark-3;
+
+                }
+
+                span:nth-child(2) {
+                    color: $color-white-0;
+
+                }
+            }
+        }
+    }
+}

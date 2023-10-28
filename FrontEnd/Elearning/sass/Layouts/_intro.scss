@@ -1,0 +1,51 @@
+.intro {
+    padding: $pd-3 0;
+    background: linear-gradient(-45deg, $color-red-0, $color-puple);
+
+    .intro__content {
+        width: 80%;
+        margin: 0 auto;
+
+        .intro__item {
+            display: flex;
+            align-items: center;
+
+            .item__left {
+                i {
+                    color: $color-white-0;
+                    font-size: $fs-6;
+                    padding-right: $mg-1;
+                }
+            }
+
+            .item__right {
+                p {
+                    margin-bottom: 0;
+                    letter-spacing: 1px;
+
+                    &:first-child {
+                        @include styleText($color-white-0, $fs-2, $fw-1)
+                    }
+
+                    &:last-child {
+                        @include styleText($color-white-0, $fs-1, $fw-0)
+                    }
+
+                }
+
+            }
+        }
+    }
+
+    @include responsive("extra-large") {
+        .intro__content {
+            .item__left {
+                display: none;
+            }
+        }
+    }
+
+    @include responsive("medium") {
+        display: none;
+    }
+}

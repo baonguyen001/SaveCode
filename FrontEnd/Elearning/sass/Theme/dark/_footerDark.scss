@@ -1,0 +1,64 @@
+.darkMode {
+    footer {
+        hr {
+            background-color: $color-dark-3;
+        }
+
+        .footer__top {
+            ul {
+                .nav-item {
+                    .nav-link {
+                        color: $color-dark-5;
+                    }
+                }
+            }
+
+            .btn-group {
+                .button--dropup {
+                    background-color: $color-dark-0;
+                    color: $color-dark-5;
+
+                    &:hover {
+                        background-color: $color-dark-6;
+                    }
+                }
+
+                .dropdown-menu {
+                    background-color: $color-dark-0;
+
+                    a {
+                        color: $color-dark-5;
+
+                    }
+                    .dropdown-item{
+                        &:hover{
+                            background-color: $color-dark-6;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer__bottom{
+            .footer__left{
+                .logoBlack{
+                    display: none;
+                }
+                .logoWhite{
+                    display: inline-block;
+                }
+                span{
+                    color: $color-dark-3;
+                }
+                
+            }
+            .footer__right{
+                .nav-item{
+                    .nav-link{
+                      color: $color-dark-5;
+                    }  
+                  }
+            }
+        }
+    }
+}
